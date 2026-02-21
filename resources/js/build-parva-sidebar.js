@@ -154,7 +154,7 @@ function add_font_zoom_buttons()
 function generate_mahabharata_navigator(language, current_parva, link_prefix)
 {
     mahabharata_navigator = `
-    <img src="/resources/images/sidebar.png" class="sidebar-button-right" type="button" data-bs-toggle="offcanvas"
+    <img src="resources/images/sidebar.png" class="sidebar-button-right" type="button" data-bs-toggle="offcanvas"
     data-bs-target="#mahabharata_offcanvas" aria-controls="mahabharata_offcanvas">
 
     <div class="offcanvas offcanvas-end" tabindex="-1" id="mahabharata_offcanvas" aria-labelledby="mahabharata_offcanvas_label">
@@ -179,7 +179,7 @@ function generate_mahabharata_navigator(language, current_parva, link_prefix)
         {
             active = "active";
         }
-        mahabharata_navigator_list += `<a class="list-group-item ${active}" href="${link_prefix}/${i}/1.html">${language[0] == 'Mahabharata' ? i.toString() : n2HIn(i)}. ${language[i]}</a>`;
+        mahabharata_navigator_list += `<a class="list-group-item ${active}" href="${link_prefix}${i}/1.html">${language[0] == 'Mahabharata' ? i.toString() : n2HIn(i)}. ${language[i]}</a>`;
     }
     mahabharata_navigator_list += "</div>";
     $('#mahabharata-index').html(mahabharata_navigator_list);
@@ -220,11 +220,11 @@ function build_parva_sidebar_sanskrit()
             active = "active";
         }
 
-        content += `<a class="list-group-item ${active}" href="/sanskrit/${current_parva}/${i}.html">अध्याय ${n2HIn(i)}</a></li>`
+        content += `<a class="list-group-item ${active}" href="sanskrit/${current_parva}/${i}.html">अध्याय ${n2HIn(i)}</a></li>`
     }
     content += "</div>";
     $("#parva-index").html(content);
-    generate_mahabharata_navigator(parva_sanskrit_titles, current_parva, '/sanskrit');
+    generate_mahabharata_navigator(parva_sanskrit_titles, current_parva, 'sanskrit/');
     finish_sidebar();
 }
 
@@ -246,7 +246,7 @@ function build_parva_sidebar()
             active = "active";
         }
 
-        content += `<a class="list-group-item ${active}" href="/${current_parva}/${i}.html">Section ${i}</a>`
+        content += `<a class="list-group-item ${active}" href="${current_parva}/${i}.html">Section ${i}</a>`
     }
     content += "</div>";
     $("#parva-index").html(content);

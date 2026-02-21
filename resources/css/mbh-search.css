@@ -1,9 +1,5 @@
-@import url("/resources/css/theme.css");
-@font-face 
-{
-  font-family: Futura;
-  src: url("/resources/Futura.ttf") format("truetype");
-}
+@import url("theme.css");
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400&display=swap');
 
 html::-webkit-scrollbar {
     display: none;
@@ -29,8 +25,9 @@ body {
     width: 100%;
     top: 0%;
     z-index: 1000;
-    font-family: Andada;
+    font-family: 'Source Serif 4', Georgia, serif;
     font-size: 1.8em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .progess-bar-header {
@@ -60,8 +57,8 @@ body {
     color: var(--theme-color-primary);
 }
 .query_match {
-    background-color: rgb(255, 193, 7);
-    color: black;
+    background-color: rgb(253, 224, 166);
+    color: rgb(55, 53, 47);
 }
 
 .mbh-search {
@@ -78,7 +75,7 @@ body {
     background-color: var(--theme-color-bg-lightest);
     color: var(--theme-color-text);
     border-radius: 25px;
-    border: 0;
+    border: 1px solid var(--theme-color-bg-lightest);
     transition: all 0.3s ease-in-out;
 }
 
@@ -95,7 +92,7 @@ body {
 }
 
 .card:hover {
-    background-color: var(--theme-color-text);
-    color: var(--theme-color-bg-light);
-    transform: scale(1.1);
+    background-color: var(--theme-color-bg-lightest);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
 }

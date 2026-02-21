@@ -33,7 +33,7 @@ var translation_loading_spinner = `
 
 /* Add the Translation Element */
 $(document).ready( () => {
-    $.getJSON("/config.json", (data) => {
+    $.getJSON(document.baseURI + "config.json", (data) => {
         translate_server = data["translate_server"];
         console.log(translate_server);
     });

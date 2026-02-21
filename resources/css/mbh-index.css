@@ -1,4 +1,4 @@
-@import url('/resources/css/theme.css');
+@import url('theme.css');
 
 body 
 {
@@ -26,16 +26,15 @@ img {
 }
 
 .card:hover {
-    transform: scale(1.1);
-    color: var(--theme-color-bg);
-    background-color: var(--theme-color-text);
+    transform: scale(1.05);
+    background-color: var(--theme-color-bg-lightest);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
 
 .card:hover .card-header, .card:hover .card-footer
 {
-    color: var(--theme-color-bg);
-    background-color: var(--theme-color-text);
+    background-color: var(--theme-color-bg-lightest);
 }
 
 .small-text 
@@ -53,5 +52,5 @@ img {
     background-color: var(--theme-color-bg-lightest);
     color: var(--theme-color-text);
     border-radius: 25px;
-    border: 0;
+    border: 1px solid var(--theme-color-bg-lightest);
 }

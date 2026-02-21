@@ -1,4 +1,5 @@
-@import url('/resources/css/theme.css');
+@import url('theme.css');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400&display=swap');
 
 html,
 body {
@@ -25,8 +26,9 @@ html::-webkit-scrollbar {
     width: 100%;
     top: 0%;
     z-index: 1000;
-    font-family: Andada;
+    font-family: 'Source Serif 4', Georgia, serif;
     font-size: 1.8em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .progess-bar-header {

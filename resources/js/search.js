@@ -22,7 +22,7 @@ spinner_html = `
 `
 /* Get the search server from config */
 $(document).ready( () => {
-    $.getJSON("/config.json", (data) => {
+    $.getJSON(document.baseURI + "config.json", (data) => {
         search_server = data["search_server"];
         var url_string = window.location.href;
         var url = new URL(url_string);
